@@ -1,0 +1,8 @@
+{
+  "name": "baconponents",
+  "short_name": "baconponents",
+  "lang": "en-US",
+  "start_url": "/",
+  "display": "standalone",
+  "scope": "/"
+}
