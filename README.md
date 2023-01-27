@@ -91,16 +91,18 @@ module.exports = {
   - page, meta, loading, main, footer
   - `cp -r ~/dev/baconponents/src/components src`
 - `/public`
-  - `favicon.png`
-  - `icon.png`
-  - `manifest.json`
-  - `splash.png`
+  - `favicon.png`, `icon.png`, `manifest.json`, `splash.png`
+  - `cp -r ~/dev/baconponents/public/. public`
+  - `trash public/favicon.ico`
 - `/.vscode/settings.json`
   - `mkdir .vscode`
   - `cp ~/dev/draft/.vscode/settings.json .vscode/settings.json`
 - `/utils` > `/lib`
   - add `/lib` files
   - `cp -r ~/dev/baconponents/src/lib src`
+  - `trash src/utils`
+  - in `src/pages/_app.tsx` and `src/pages/index.tsx`
+    - change `import { api } from "../utils/api";` to `import { api } from '@/lib/api'`
 
 ## project specific changes
 
@@ -112,5 +114,8 @@ module.exports = {
 ## install dependences
 
 - classnames (required for `components/`): `npm i classnames`
+
+## install additional dependences
+
 - ui/icons: `npm i @headlessui/react @heroicons/react`
 - forms: `@tailwindcss/forms`
