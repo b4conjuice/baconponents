@@ -90,6 +90,10 @@ module.exports = {
 - `/components`
   - page, meta, loading, main, footer
   - `cp -r ~/dev/baconponents/src/components src`
+  - TODO: Account for components with dependencies
+    - `dragDropList`: `@hello-pangea/dnd`
+    - `modal`: `@headlessui/react`, `@heroicons/react`
+  - TODO: add toast/notification
 - `/public`
   - `favicon.png`, `icon.png`, `manifest.json`, `splash.png`
   - `cp -r ~/dev/baconponents/public/. public`
@@ -100,6 +104,7 @@ module.exports = {
 - `/utils` > `/lib`
   - add `/lib` files
   - `cp -r ~/dev/baconponents/src/lib src`
+  - `cp src/utils/api.ts src/lib`
   - `trash src/utils`
   - in `src/pages/_app.tsx` and `src/pages/index.tsx`
     - change `import { api } from "../utils/api";` to `import { api } from '@/lib/api'`
