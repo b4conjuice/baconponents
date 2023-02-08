@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import Button from '@/components/design/button'
 import { type NextPage } from 'next'
 import { signIn, signOut, useSession } from 'next-auth/react'
 import {
@@ -7,9 +6,10 @@ import {
   ArrowLeftOnRectangleIcon,
 } from '@heroicons/react/24/solid'
 
-import Page from '@/components/page'
+import Button from '@/components/design/button'
 import Main from '@/components/design/main'
 import Title from '@/components/design/title'
+import Page from '@/components/page'
 import { api } from '@/lib/api'
 
 function Messages() {
@@ -137,6 +137,10 @@ const Home: NextPage = () => {
         </div>
         <div className='flex flex-grow flex-col items-center justify-center space-y-4'>
           <Title>home</Title>
+          <Button href='https://github.com/b4conjuice/baconponents'>
+            external link
+          </Button>
+          <Button onClick={() => console.log('click')}>button</Button>
           {hello.data?.greeting}
         </div>
         <Messages />
